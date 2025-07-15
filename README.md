@@ -58,12 +58,8 @@ This project consists of:
 
 Here are some screenshots of the application in action.
 <td align="center" valign="top"><img src="screenshot/main.png" width="220" alt="Screenshot 1"></td>
-<table align="center">
-<tr>
-    <td align="center" valign="top"><img src="screenshot/second.png" width="220" alt="Screenshot 2"></td>
-    <td align="center" valign="top"><img src="screenshot/trend.png" width="220" alt="Screenshot 3"></td>
-  </tr>
-</table>
+<td align="center" valign="top"><img src="screenshot/second.png" width="220" alt="Screenshot 2"></td>
+<td align="center" valign="top"><img src="screenshot/trend.png" width="220" alt="Screenshot 3"></td>
 <td align="center" valign="top"><img src="screenshot/data.png" width="220" alt="Screenshot 4"></td>
 
 ---
