@@ -30,12 +30,11 @@ Drone Air Monitor is a full-stack application designed to tackle the challenge o
 
 This project consists of:
 *   A **web-based dashboard** for real-time visualization and control.
-*   A **backend server** to handle data ingestion from drones, user management, and API services.
-*   A **communication protocol** for drones to send data securely and efficiently, likely using WebSockets for real-time updates.
+*   A **backend server** to handle data ingestion from drones, and API services.
+*   A **communication protocol** for drones to send data securely and efficiently.
 
 ### Built With
 
-This project is built with modern technologies to ensure performance and scalability. (You can modify this list based on your actual stack).
 
 *   **Frontend:**
     *   [React.js](https://reactjs.org/)
@@ -43,10 +42,7 @@ This project is built with modern technologies to ensure performance and scalabi
     *   [Chart.js](https://www.chartjs.org/)
 *   **Backend:**
     *   [Node.js](https://nodejs.org/)
-    *   [Express.js](https://expressjs.com/)
-    *   [WebSocket (ws)](https://github.com/websockets/ws)
-*   **Database:**
-    *   [MongoDB](https://www.mongodb.com/)
+    *   [Maps API](https://console.cloud.google.com/)
 
 ---
 
@@ -54,8 +50,6 @@ This project is built with modern technologies to ensure performance and scalabi
 
 *   **Real-time Map Visualization:** Track drones and view live air quality data (e.g., CO, NO2, PM2.5) on an interactive map.
 *   **Historical Data Analysis:** View and export historical data with charts and graphs to identify pollution trends.
-*   **Drone Fleet Management:** Register new drones, view drone status (e.g., battery, location), and manage your fleet.
-*   **User Authentication:** Secure login and registration for platform administrators and users.
 *   **Responsive Dashboard:** A clean and modern UI that works on both desktop and mobile devices.
 
 ---
@@ -63,27 +57,18 @@ This project is built with modern technologies to ensure performance and scalabi
 ## 📸 Screenshots
 
 Here are some screenshots of the application in action.
-
-**To add your own screenshots:**
-1. Take screenshots of your running application.
-2. In the GitHub web editor for this `README.md` file, you can drag and drop the image files directly into the text. GitHub will upload them and generate the necessary markdown link.
-3. Replace the placeholder images below with your own.
-
-**1. Dashboard View**
-*The main dashboard showing the live map, drone statuses, and key air quality metrics.*
-!Dashboard View
-
-**2. Historical Data Page**
-*Charts and graphs displaying air quality trends over time for a selected area or drone.*
-!Historical Data
-
-**3. Drone Management**
-*A table or list view of all registered drones with their current status and details.*
-!Drone Management
-
-**4. Login Page**
-*The user authentication entry point.*
-!Login Page
+<table align="center">
+  <tr>
+    <td align="center" valign="top"><img src="screenshots/main.jpg" width="220" alt="Screenshot 1"></td>
+</tr>
+<tr>
+    <td align="center" valign="top"><img src="screenshots/second.jpg" width="220" alt="Screenshot 2"></td>
+    <td align="center" valign="top"><img src="screenshots/trend.jpg" width="220" alt="Screenshot 3"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><img src="screenshots/data.jpg" width="220" alt="Screenshot 4"></td>
+  </tr>
+</table>
 
 ---
 
@@ -97,7 +82,6 @@ Make sure you have the following software installed on your machine:
 
 *   Node.js (which includes npm)
 *   Git
-*   A database instance (e.g., MongoDB) running locally or accessible via a URI.
 
 ### Installation
 
@@ -107,48 +91,13 @@ Make sure you have the following software installed on your machine:
     cd DroneAirMonitor
     ```
 
-2.  **Install Backend Dependencies**
-    The `app` directory seems to contain your backend. Navigate to it and install the NPM packages.
-    ```sh
-    cd app
-    npm install
+2.  **Inside a terminal**
+    ```node
+    node server.js
     ```
+    The application should open automatically in your browser at `http://localhost:9000`.
 
-3.  **Install Frontend Dependencies** (if you have a separate frontend folder)
-    ```sh
-    # In a new terminal, from the root directory
-    cd client # Or your frontend folder name
-    npm install
-    ```
-
-4.  **Set up Environment Variables**
-    Create a `.env` file in your `app` (backend) directory. Copy the contents of `.env.example` (if it exists) and fill in your configuration details.
-    ```env
-    # Example .env file in app/
-    PORT=5000
-    DATABASE_URL="your_mongodb_connection_string"
-    JWT_SECRET="a_very_secure_secret_key"
-    ```
-
----
-
-## 🔧 Usage
-
-1.  **Start the Backend Server**
-    ```sh
-    # From the app/ directory
-    npm start
-    ```
-    The server should now be running on `http://localhost:5000` (or the port you specified).
-
-2.  **Start the Frontend Development Server**
-    ```sh
-    # From the client/ directory
-    npm start
-    ```
-    The application should open automatically in your browser at `http://localhost:3000`.
-
-You can now navigate the application, register as a new user, and start exploring its features. You may need to run a separate script to simulate drone data.
+You can now navigate the application, and start exploring its features. You need to change the codebase to simulate drone data.
 
 ---
 
@@ -167,10 +116,3 @@ Contributions make the open-source community an amazing place to learn, inspire,
 ## 📝 License
 
 Distributed under the MIT License. See `LICENSE` file for more information.
-
----
-
-## 🙏 Acknowledgements
-
-*   Best README Template
-*   Shields.io
