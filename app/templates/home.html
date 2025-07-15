@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Oxygen+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="fav.png">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-stock.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Drone Based Weather App</title>
+  </head>
+  <body>
+    <main>
+      <section class="container">
+        <div class="row">
+          <h1 class="col d-flex justify-content-center align-items-center city-title" id="searched-city">
+            <i class="fas fa-map-marker-alt"></i>&nbsp;Latest from Kolkata
+          </h1>
+        </div>
+        <div class="top-right">
+          <span id="current-date">--</span> | <span id="current-time">--:--</span>
+        </div>
+      </section>
+      
+      <section class="current-weather">
+        <div class="container">
+          <div class="row">
+            <h1 class="col temp-title" id="current-temperature">--</h1>
+            <div class="vertical-separator"></div>
+            <div class="col todays-info measurements">
+              <span id="current-time"> </span>
+              <h2 id="current-day"> </h2>
+              <li>Humidity: <span id="humidity">--</span></li>
+              <li>Air Quality: <span id="air-quality">--</span> <span id="air-quality-text" class="quality-text"></span></li>
+              <li>CO Level: <span id="co-level">--</span> <span id="co-level-text" class="quality-text"></span></li>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </section>
+
+      <section class="container graph-container">
+        <h2 class="text-center">Weather Trends</h2>
+        <div class="text-center my-3">
+        <div id="tempChart" style="height: 300px;"></div>
+        <div id="humidityChart" style="height: 300px;"></div>
+        <div id="airQualityChart" style="height: 300px;"></div>
+        <div id="coChart" style="height: 300px;"></div>
+      </section>
+
+      <section id="pollution-map" class="map-section">
+        <h1>Pollution Hotspot: Chowbaga, Kolkata</h1>
+        <div class="map-container" style="height: 600px;">
+          <div id="map">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.123456789012!2d88.4182213!3d22.5169168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0273ebed3d1e67%3A0x2a1a5e3d5b3d5e3d!2sHeritage%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <p>Our last drone monitoring has identified Chowbaga as a high pollution zone with consistently poor AQI levels.</p>
+      </section>
+
+      <footer>
+        <p>
+          Designed and coded by
+          <a href="https://github.com/Retr0Hub" target="_blank">Ayush for ICCPDM</a>
+        </p>
+      </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
